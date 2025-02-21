@@ -33,3 +33,42 @@ console.log(bikes);
 
 const minorWeight = bikes[0].weight
 bikeEl.innerText = minorWeight;
+
+//Second snack
+const footballTeam = [
+    {
+        name : 'Inter',
+        points : 0,
+        penalty : 0
+    },
+    {
+        name : 'Juventus',
+        points : 0,
+        penalty : 0
+    },
+    {
+        name : 'Milan',
+        points : 0,
+        penalty : 0
+    },
+    {
+        name : 'Real Madrid',
+        points : 0,
+        penalty : 0
+    },
+]
+const newList = []
+function generateRandomNumber () {
+    return Math.floor(Math.random() * (15 - 1)) + 1
+   };
+
+for (let i = 0; i< footballTeam.length; i++){
+    const thisTeam = footballTeam[i];
+    thisTeam.points = generateRandomNumber();
+    thisTeam.penalty = generateRandomNumber();
+    newList.push(`{${thisTeam.name}, ${thisTeam.penalty}}`)
+   }
+   console.log(footballTeam);
+   console.log(newList);
+   
+   
